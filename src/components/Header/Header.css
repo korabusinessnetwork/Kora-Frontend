@@ -1,0 +1,146 @@
+.header {
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 32px;
+
+    background: linear-gradient(90deg, #03152f 0%, #08254d 100%);
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__logo-icon {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+
+    font-size: 28px;
+}
+
+.header__logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__title {
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header__logo-text span {
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+.header__search {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 0 48px;
+}
+
+.header__search input {
+    width: 100%;
+    max-width: 560px;
+
+    height: 56px;
+
+    padding: 0 24px;
+
+    border: none;
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    outline: none;
+}
+
+.header__search input::placeholder {
+    color: #cbd5e1;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__datetime {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.header__datetime strong {
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+.header__datetime span {
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__avatar {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+.header__operator {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__operator span {
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.header__operator strong {
+    color: #ffffff;
+
+    font-size: 16px;
+}
