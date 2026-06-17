@@ -1,6 +1,23 @@
 import "./SalePanel.css";
+import type { SalePanelItem } from "../../types/sale";
 
-export function SalePanel() {
+import { SaleItem } from "./SaleItem";
+
+interface SalePanelProps {
+    items: SalePanelItem[];
+}
+
+export function SalePanel({
+    items,
+}: SalePanelProps) {
+    const subtotal = items.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+    );
+
+    const discount = 0;
+
+    const total = subtotal - discount;
     return (
         <aside className="sale-panel">
 
@@ -27,37 +44,19 @@ export function SalePanel() {
 
             <div className="sale-panel__items">
 
-                <div className="sale-panel__item">
+                {items.map((item) => (
 
-                    <div className="sale-panel__item-info">
+                    <SaleItem
+                        key={item.id}
+                        
+                        name={item.name}
+                        quantity={item.quantity}
+                        price={item.price}
+                    />
 
-                        <span className="sale-panel__item-title">
-                            Coca-Cola 350ml
-                        </span>
-
-                        <span className="sale-panel__item-details">
-                            2x • R$ 8,00
-                        </span>
-
-                    </div>
-
-                    <button
-                        className="sale-panel__item-remove"
-                        type="button"
-                    >
-                        🗑️
-                    </button>
-
-                </div>
+                ))}
 
             </div>
-
-            <button
-                className="sale-panel__observation"
-                type="button"
-            >
-                💬 Adicionar observação
-            </button>
 
             <div className="sale-panel__summary">
 
@@ -65,7 +64,7 @@ export function SalePanel() {
 
                     <span>Subtotal</span>
 
-                    <span>R$ 16,00</span>
+                    <span>R$ {subtotal.toFixed(2)}</span>
 
                 </div>
 
@@ -73,7 +72,7 @@ export function SalePanel() {
 
                     <span>Desconto</span>
 
-                    <span>R$ 0,00</span>
+                    <span>R$ {discount.toFixed(2)}</span>
 
                 </div>
 
@@ -83,8 +82,7 @@ export function SalePanel() {
 
                 <span>Total</span>
 
-                <strong>R$ 16,00</strong>
-
+                <strong>R$ {total.toFixed(2)}</strong>
             </div>
 
             <button

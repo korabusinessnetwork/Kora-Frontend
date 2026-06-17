@@ -1,0 +1,148 @@
+.sale-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    transition: all 0.2s ease;
+
+}
+
+.sale-item:hover {
+
+    border-color: #d1d5db;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+
+}
+
+.sale-item__header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+}
+
+.sale-item__info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+.sale-item__title {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #111827;
+
+}
+
+.sale-item__details {
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+}
+
+.sale-item__actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+.sale-item__comment,
+.sale-item__remove {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+.sale-item__comment {
+
+    color: #2563eb;
+
+}
+
+.sale-item__comment:hover {
+
+    background: #eff6ff;
+
+}
+
+.sale-item__remove {
+
+    color: #dc2626;
+
+}
+
+.sale-item__remove:hover {
+
+    background: #fef2f2;
+
+}
+
+.sale-item__observation-preview {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    border-left: 3px solid #2563eb;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    word-break: break-word;
+
+}

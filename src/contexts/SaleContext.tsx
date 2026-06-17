@@ -7,14 +7,10 @@ import {
 } from "react";
 
 import type { Product } from "../types/product";
-
-export interface SaleItem {
-    product: Product;
-    quantity: number;
-}
+import type { SalePanelItem } from "../types/sale";
 
 interface SaleContextData {
-    items: SaleItem[];
+    items: SalePanelItem[];
     addProduct: (product: Product) => void;
 }
 
@@ -24,34 +20,45 @@ interface SaleProviderProps {
     children: ReactNode;
 }
 
-export function SaleProvider({ children }: SaleProviderProps) {
-    const [items, setItems] = useState<SaleItem[]>([]);
+export function SaleProvider({
+    children,
+}: SaleProviderProps) {
+
+    const [items, setItems] = useState<SalePanelItem[]>([]);
 
     function addProduct(product: Product) {
+
         setItems((previous) => {
+
             const existing = previous.find(
-                (item) => item.product.id === product.id
+                (item) => item.id === product.id
             );
 
             if (existing) {
+
                 return previous.map((item) =>
-                    item.product.id === product.id
+                    item.id === product.id
                         ? {
                               ...item,
                               quantity: item.quantity + 1,
                           }
                         : item
                 );
+
             }
 
             return [
                 ...previous,
                 {
-                    product,
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
                     quantity: 1,
                 },
             ];
+
         });
+
     }
 
     const value = useMemo(
@@ -70,6 +77,7 @@ export function SaleProvider({ children }: SaleProviderProps) {
 }
 
 export function useSaleContext() {
+
     const context = useContext(SaleContext);
 
     if (!context) {
@@ -79,4 +87,5 @@ export function useSaleContext() {
     }
 
     return context;
+
 }

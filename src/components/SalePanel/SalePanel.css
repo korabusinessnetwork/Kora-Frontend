@@ -191,3 +191,169 @@
 .sale-panel__receive:hover {
     background: #15803d;
 }
+.sale-panel__item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 16px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: #ffffff;
+}
+
+.sale-panel__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sale-panel__item-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.sale-panel__item-title {
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.sale-panel__item-details {
+    font-size: 15px;
+
+    color: #6b7280;
+}
+
+.sale-panel__item-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.sale-panel__item-comment {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+.sale-panel__item-comment:hover {
+    transform: scale(1.08);
+}
+
+.sale-panel__item-remove {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #dc2626;
+
+    cursor: pointer;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    transition: 0.2s;
+}
+
+.sale-panel__item-remove:hover {
+    transform: scale(1.1);
+
+    color: #b91c1c;
+}
+
+.sale-panel__item-observation {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border: 1px solid #d1fae5;
+    border-radius: 14px;
+
+    background: #f8fffb;
+}
+
+.sale-panel__item-observation h4 {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.sale-panel__item-observation textarea {
+    width: 100%;
+    min-height: 90px;
+
+    resize: none;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.sale-panel__item-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+.sale-panel__item-footer button {
+    min-width: 110px;
+
+    height: 42px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.sale-panel__item-footer button:first-child {
+    background: #f3f4f6;
+
+    color: #374151;
+}
+
+.sale-panel__item-footer button:last-child {
+    background: #16a34a;
+
+    color: #ffffff;
+}
